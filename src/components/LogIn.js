@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
 
 export class LogIn extends Component {
   state = {
@@ -32,7 +31,7 @@ export class LogIn extends Component {
     let result = false;
     await axios({
       method: "get",
-      url: `http://invtestsrv00.northcentralus.cloudapp.azure.com/ubareviewapp.service/api/Account/Users/Detail?id=${userId}`,
+      url: `http://invtestsrv00.northcentralus.cloudapp.azure.com/ubareviewapp.service/api/Users/Detail?id=${userId}`,
     })
       .then((res) => {
         result = res.data.Data.userstatustext === "approved" ? true : false;
@@ -46,11 +45,11 @@ export class LogIn extends Component {
   };
 
   handleSubmit = async (e) => {
-    const { history } = this.props;
     e.preventDefault();
+    const { history } = this.props;
     try {
       const loginUser = await this.login();
-      console.log(loginUser, "login user response"); // Successful Login data, you can get the token with loginUser.data.Data.Token
+      localStorage.setItem("userToken", loginUser.data.Data.Token); // Successful Login data, you can get the token with loginUser.data.Data.Token
       const validUser = await this.checkValidUser(loginUser.data.Data.User.Id); // Returns true or false to check if user has been approved to know which page to redirect
       if (validUser) {
         console.log("valid user, redirect to feedback page", this.props);
