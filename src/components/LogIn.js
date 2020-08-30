@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export class LogIn extends Component {
   state = {
@@ -132,7 +133,7 @@ export class LogIn extends Component {
                   </div>
                   <br />
                   <p style={{ color: "white" }}>
-                    Don't have an account? <b>SignUp</b>
+                    Don't have an account? <Link to="/Signup" style={{color: 'white', fontWeight: 'bold'}}>SignUp</Link>
                   </p>
                 </div>
               </div>

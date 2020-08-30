@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 // import {SignUpRoute} from 'react-router-dom';
 
 export class SignUp extends Component {
@@ -95,7 +96,7 @@ export class SignUp extends Component {
                     <div className="form-w3ls-left-info">
                       <form onSubmit={this.handleSubmit}>
                         <input
-                          type="text"
+                          type="email"
                           placeholder="First Name"
                           required
                           value={firstname}
@@ -103,7 +104,7 @@ export class SignUp extends Component {
                           onChange={this.handleChange}
                         />
                         <input
-                          type="text"
+                          type="email"
                           placeholder="Last Name"
                           value={lastname}
                           name="lastname"
@@ -143,6 +144,10 @@ export class SignUp extends Component {
                     </div>
                   </div>
                 </div>
+                <br />
+                  <p style={{ color: "white" }}>
+                    Have an account? <Link to="/" style={{color: 'white', fontWeight: 'bold'}}>Login</Link>
+                  </p>
               </div>
             </div>
           </div>
