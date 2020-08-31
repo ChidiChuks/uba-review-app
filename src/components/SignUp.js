@@ -66,12 +66,12 @@ export class SignUp extends Component {
             <header>
               <div className="login-logo-float">
                 <h1>
-                  <a className="logo" href="index.html">
+                  <Link className="logo" to="/home">
                     <img
                       src="images/UBA-logo.svg"
                       alt="Logo of the United Bank for Africa"
                     />
-                  </a>
+                  </Link>
                 </h1>
               </div>
               <div className="clear" />
