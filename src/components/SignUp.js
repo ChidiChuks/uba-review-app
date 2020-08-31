@@ -146,7 +146,7 @@ export class SignUp extends Component {
                 </div>
                 <br />
                   <p style={{ color: "white" }}>
-                    Have an account? <Link to="/" style={{color: 'white', fontWeight: 'bold'}}>Login</Link>
+                    Have an account? <Link to="/" style={{color: 'white', fontWeight: 'bold'}}>SignIn</Link>
                   </p>
               </div>
             </div>

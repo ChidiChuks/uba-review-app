@@ -130,11 +130,11 @@ export class LogIn extends Component {
                         </form>
                       </div>
                     </div>
-                  </div>
                   <br />
                   <p style={{ color: "white" }}>
                     Don't have an account? <Link to="/Signup" style={{color: 'white', fontWeight: 'bold'}}>SignUp</Link>
                   </p>
+                  </div>
                 </div>
               </div>
             </div>
