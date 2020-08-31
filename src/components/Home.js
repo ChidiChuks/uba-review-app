@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 
 export class Home extends Component {
     render() {
@@ -15,13 +16,13 @@ export class Home extends Component {
             <li><a className="scroll" href="#overview">Overview</a></li>
             <li><a className="scroll" href="#how-it-works">How it works</a></li>
             <li><a className="scroll" href="#media">Media</a></li>
-            <a className="view hvr-bounce-to-left" href="login.html">LOG OUT</a>	 
+            <Link className="view hvr-bounce-to-left" to="/">LOG OUT</Link>	 
           </ul>
         </div>
         {/* script-for-menu */}
         {/* script-for-menu */}	  	
         <div className="logo wow fadeInLeft" data-wow-delay="0.5s">
-          <a href="index.html"><img src="images/UBA-Logo.svg" alt="" /></a>
+          <Link to="/feedback"><img src="images/UBA-Logo.svg" alt="" /></Link>
         </div>
         <div className="clearfix" />
       </div>
