@@ -9,8 +9,17 @@ export class Feedback extends Component {
     features: [],
     reviews: [],
     replies: {},
-    message: [],
+    newReview: {
+      Comment: '',
+      AppFeature: '',
+      ImageUrl: '',
+      theme: ''
+    },
   }
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   componentDidMount () {
     const userToken = localStorage.getItem( "userToken" );
@@ -101,23 +110,29 @@ export class Feedback extends Component {
     });
   }
 
-  createMessage = (AppClientId) => {
+  createMessage = () => {
     const userToken = localStorage.getItem( "userToken" );
+    const newMessage = { 
+      Comment: this.state.newComment.Comment,
+      AppFeature: this.state.newComment.AppFeature + "-" + this.state.newComment.theme,
+      // ImageUrl: '',
+     };
 
     axios({
       method: "post",
       url:
         `http://invtestsrv00.northcentralus.cloudapp.azure.com/ubareviewapp.service/api/Reviews/Create`,
+        data: ,
       headers: {
         "Authorization": `bearer ${userToken}`,
       },
     }).then((res) => {
      
-      if (res.data.Data.records.length > 0) {
+      if (res.data.ResponseCode === "00") {
 
-        console.log(res.data.Data.Comment);
+       alert("Message Sent!");
 
-        this.setState({message: {...this.state.replies, [AppClientId]: [...res.data.Data.records]}});
+        this.setState({reviews: {...this.state.reviews, ...res.data.Data}});
 
       }
       
@@ -173,9 +188,9 @@ export class Feedback extends Component {
                   
                     <h3>Feedback Form</h3>
                     <div className="form-w3ls-left-info">
-                      <form action="#" method="post">
+                      <form method="post" onSubmit={this.createMessage}>
                         {/* <input type="email" placeholder="Email Address" required /> */}
-                        <select id="themes" name="Themes" className="uba-feed-options">
+                        <select id="themes" name="theme" className="uba-feed-options" value={this.state.newReview.theme} onChange={this.handleChange}>
                           <option value="SelectTheme">Select Viewed Theme</option>
                           {this.state.themes.map(theme => {
                             return (<option key={theme.id} value={theme.id}>{theme.name}</option>);
@@ -184,7 +199,7 @@ export class Feedback extends Component {
                           <option value="White">White</option>
                           <option value="DarkKnight">Dark Knight</option> */}
                         </select>
-                        <select id="featue" name="Features" className="uba-feed-options">
+                        <select id="featue" name="feature" className="uba-feed-options" value={this.state.newReview.AppFeature} onChange={this.handleChange}>
                         <option value="">Select a Feature</option>
                           {this.state.features.map(feature => {
                             return (<option key={feature.id} value={feature.id}>{feature.name}</option>);
@@ -196,7 +211,7 @@ export class Feedback extends Component {
                           <option value="Accounts">Accounts</option> */}
                         </select>
                         <div className="uba-feed-message">
-                          <textarea rows={3} className="form-control" placeholder="Message" defaultValue={""} />
+                          <textarea rows={3} className="form-control" placeholder="Message" value={this.state.newReview.Comment} onChange={this.handleChange} />
                         </div>
                         <label className="form-check-label">
                           <input id="inputAddList" type="checkbox" />
