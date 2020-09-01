@@ -122,7 +122,7 @@ export class Feedback extends Component {
       method: "post",
       url:
         `http://invtestsrv00.northcentralus.cloudapp.azure.com/ubareviewapp.service/api/Reviews/Create`,
-        data: ,
+        // data: ,
       headers: {
         "Authorization": `bearer ${userToken}`,
       },
@@ -213,6 +213,13 @@ export class Feedback extends Component {
                         <div className="uba-feed-message">
                           <textarea rows={3} className="form-control" placeholder="Message" value={this.state.newReview.Comment} onChange={this.handleChange} />
                         </div>
+
+                        <div className="uba-feed-message">
+                          <input type="file" onChange={this.fileChangedHandler} />
+                          {/* <button onClick={this.uploadHandler}>Upload!</button> */}
+                        </div>
+                        
+
                         <label className="form-check-label">
                           <input id="inputAddList" type="checkbox" />
                           <span> Remember </span>
@@ -237,26 +244,37 @@ export class Feedback extends Component {
               {/* Testing the review feedback for already registered users */}
               <div className="content-inner-info">
                 {this.state.reviews.map(review => {
-                  return(<div className="content-Expo-main"  key={review.id}>
-                    <p>App Feature: {review.AppFeature}</p>
-                    <p>Comment: {review.Comment}</p>
-                    <br />
-                    {review.ImageUrl && <img src={review.ImageUrl} alt="Images of feedback from App" />}
+                  return(
+                    <div className="column">
+                      <div className="content-Expo-main"  key={review.id}>
+                      <p>App Feature: {review.AppFeature}</p>
+                      <p>Comment: {review.Comment}</p>
+                      <br />
 
-                    <br />
+                      <button className="btn" onClick={() => this.getReplies(review.id)}>View Replies</button>
+                      
+                      <div className="column">
+                      <div className="col-md-6">
+                      {review.ImageUrl && <img src={review.ImageUrl} alt="Images of feedback from App" />}
 
-                    <button className="btn" onClick={() => this.getReplies(review.id)}>View Replies</button>
+                      </div>
 
-                    {this.state.replies[review.id] && <div className="content-Expo-main" >
-                    <h3>Replies:</h3>
-                    {this.state.replies[review.id].map(reply => {
-                      return(<p>Comment: {reply.Comment}</p>);
-                    })}
-                    </div> }
+                      </div>
+                      <br />
 
-                    <hr />
 
-                  </div>);
+                      {this.state.replies[review.id] && <div className="content-Expo-main" >
+                      <h3>Replies:</h3>
+                      {this.state.replies[review.id].map(reply => {
+                        return(<p>Comment: {reply.Comment}</p>);
+                      })}
+                      </div> }
+
+                      <hr />
+
+                    </div>
+                  </div>
+                  );
                 })}
                 
               </div>
