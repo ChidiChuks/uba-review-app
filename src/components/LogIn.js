@@ -77,7 +77,7 @@ export class LogIn extends Component {
                 <div className="login-logo-float">
                   <h1>
                     <Link className="logo" to="/home">
-                      <img src="images/UBA-logo.svg" />
+                      <img src="images/UBA-logo.svg" alt="United Bank for Africa Logo" />
                     </Link>
                   </h1>
                 </div>

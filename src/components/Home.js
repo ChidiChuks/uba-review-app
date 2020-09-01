@@ -22,7 +22,7 @@ export class Home extends Component {
         {/* script-for-menu */}
         {/* script-for-menu */}	  	
         <div className="logo wow fadeInLeft" data-wow-delay="0.5s">
-          <Link to="/feedback"><img src="images/UBA-Logo.svg" alt="" /></Link>
+          <Link to="/feedback"><img src="images/UBA-Logo.svg" alt="United Bank for Africa Logo" /></Link>
         </div>
         <div className="clearfix" />
       </div>
@@ -31,8 +31,8 @@ export class Home extends Component {
         <div className="col-md-5 banner-text wow fadeInRight" data-wow-delay="0.5s">
           <h1>Banking Experience just got better!</h1>
           <p>Introducing our brand New UBA app. Download and experience for yourself.</p>
-          <a className="google-play" href="#"><img src="images/google-play.svg" /></a>
-          <a className="apple-store" href="#"><img src="images/apple-store.svg" /></a>
+          <a className="google-play" href=" "><img src="images/google-play.svg" alt="Google Play store" /></a>
+          <a className="apple-store" href=" "><img src="images/apple-store.svg" alt="App store" /></a>
         </div>
         <div className="col-md-6 banner-pic wow fadeInLeft" data-wow-delay="0.5s">
           <img src="images/uba-phone-app.png" alt="UBA App" />
@@ -117,7 +117,7 @@ export class Home extends Component {
   {/**/}
   {/*-- video import Starts --*/}
   <div id="how-it-works" className="video">
-    <img src="images/playVideoIcon.png" />
+    <img src="images/playVideoIcon.png" alt="A corporate ad video playing at the background" />
     <h1 className="spacer">See How It Works</h1>
     <h3 className="spacer">Watch 60 seconds Video of how it works</h3>
   </div>
@@ -151,7 +151,7 @@ export class Home extends Component {
                 <div className="row uba-card-group">
                   <div className="col-md-4">
                     <div className="uba-card">
-                      <img className="card-img-top" src="images/blog-image.jpg" alt="Blog Image 01" />
+                      <img className="card-img-top" src="images/blog-image.jpg" alt="Blog" />
                       <div className="card-body">
                         <p className="blog-para-1">
                           <span><small className="text-muted">June 16, 2020</small></span>
@@ -165,13 +165,13 @@ export class Home extends Component {
                         </p>
                         <h5 className="card-title">Keep it simple and beautiful, fun and functional</h5>
                         <p className="card-text"> Introducing our brand New UBA app. Download and experience for yourself.. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a className="view-blog hvr-bounce-to-left" href="#">READ MORE</a>	 
+                        <a className="view-blog hvr-bounce-to-left" href=".">READ MORE</a>	 
                       </div>
                     </div>
                   </div>
                   <div className="col-md-4">
                     <div className="uba-card">
-                      <img className="card-img-top" src="images/blog-image.jpg" alt="Blog Image 01" />
+                      <img className="card-img-top" src="images/blog-image.jpg" alt="Blog" />
                       <div className="card-body">
                         <p className="blog-para-1">
                           <span><small className="text-muted">June 16, 2020</small></span>
@@ -185,13 +185,13 @@ export class Home extends Component {
                         </p>
                         <h5 className="card-title">Keep it simple and beautiful, fun and functional</h5>
                         <p className="card-text"> Introducing our brand New UBA app. Download and experience for yourself.. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a className="view-blog hvr-bounce-to-left" href="#">READ MORE</a>	 
+                        <a className="view-blog hvr-bounce-to-left" href=".">READ MORE</a>	 
                       </div>
                     </div>
                   </div>
                   <div className="col-md-4">
                     <div className="uba-card">
-                      <img className="card-img-top" src="images/blog-image.jpg" alt="Blog Image 01" />
+                      <img className="card-img-top" src="images/blog-image.jpg" alt="Blog" />
                       <div className="card-body">
                         <p className="blog-para-1">
                           <span><small className="text-muted">June 16, 2020</small></span>
@@ -205,7 +205,7 @@ export class Home extends Component {
                         </p>
                         <h5 className="card-title">Keep it simple and beautiful, fun and functional</h5>
                         <p className="card-text"> Introducing our brand New UBA app. Download and experience for yourself.. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a className="view-blog hvr-bounce-to-left" href="#">READ MORE</a>	 
+                        <a className="view-blog hvr-bounce-to-left" href=".">READ MORE</a>	 
                       </div>
                     </div>
                   </div>
@@ -248,8 +248,8 @@ export class Home extends Component {
           <h1>Get it now</h1>
           <p>Available on both App Store and Play Store.</p>
           <div className="wow fadeInRight" data-wow-delay="0.5s">
-            <a className="google-play" href="#"><img src="images/google-play.svg" /></a>
-            <a className="apple-store" href="#"><img src="images/apple-store.svg" /></a>
+            <a className="google-play" href=" "><img src="images/google-play.svg" alt="" /></a>
+            <a className="apple-store" href=" "><img src="images/apple-store.svg" alt="" /></a>
           </div>
         </div>
         <div className="col-md-1" />
