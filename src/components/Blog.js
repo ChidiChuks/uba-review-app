@@ -21,7 +21,7 @@ export class Blog extends Component {
         {/* script-for-menu */}
         {/* script-for-menu */}	  	
         <div className="logo wow fadeInLeft" data-wow-delay="0.5s">
-          <a href="index.html"><img src="images/UBA-Logo.svg" alt="" /></a>
+          <a href="index.html"><img src="images/UBA-Logo.svg" alt="UBA Logo" /></a>
         </div>
         <div className="clearfix" />
       </div>
@@ -44,7 +44,7 @@ export class Blog extends Component {
     </div>
     <div className="col-md-5">
       <div className="uba-big-card">
-        <img className="card-img-top" src="images/blog-image.jpg" alt="Blog Image 01" />
+        <img className="card-img-top" src="images/blog-image.jpg" alt="Blog" />
         <div className="card-body00 big-card-body">
           <p className="blog-para-1">
             <span><small className="text-muted">June 16, 2020</small></span>
@@ -101,8 +101,8 @@ export class Blog extends Component {
           <h1>Get it now</h1>
           <p>Available on both App Store and Play Store.</p>
           <div className="wow fadeInRight" data-wow-delay="0.5s">
-            <a className="google-play" href="#"><img src="images/google-play.svg" /></a>
-            <a className="apple-store" href="#"><img src="images/apple-store.svg" /></a>
+            <a className="google-play" href=" "><img src="images/google-play.svg" alt="Google play store" /></a>
+            <a className="apple-store" href=" "><img src="images/apple-store.svg" alt="App store" /></a>
           </div>
         </div>
         <div className="col-md-1" />
