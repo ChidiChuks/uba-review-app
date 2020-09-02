@@ -143,8 +143,12 @@ export class Feedback extends Component {
             reviews: [res.data.Data, ...this.state.reviews],
           });
 
-          this.setState({Comment: '', AppFeature: '', theme: '', Image: null});
-
+          this.setState({
+            Comment: "",
+            AppFeature: "",
+            theme: "",
+            Image: null,
+          });
         }
       })
       .catch((error) => {
@@ -208,7 +212,12 @@ export class Feedback extends Component {
                     <div className="content-login-right-main">
                       <h3>Feedback Form</h3>
                       <div className="form-w3ls-left-info">
-                        <form method="post" onSubmit={this.createMessage} data-netlify="true" data-netlify-honeypot="bot-field">
+                        <form
+                          method="post"
+                          onSubmit={this.createMessage}
+                          data-netlify="true"
+                          data-netlify-honeypot="bot-field"
+                        >
                           {/* <input type="email" placeholder="Email Address" required /> */}
                           <select
                             id="themes"

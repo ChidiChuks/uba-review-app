@@ -94,7 +94,11 @@ export class SignUp extends Component {
                   <div className="content-login-right-main">
                     <h3>Sign up</h3>
                     <div className="form-w3ls-left-info">
-                      <form onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field">
+                      <form
+                        onSubmit={this.handleSubmit}
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                      >
                         <input
                           type="email"
                           placeholder="First Name"
@@ -145,9 +149,12 @@ export class SignUp extends Component {
                   </div>
                 </div>
                 <br />
-                  <p style={{ color: "white" }}>
-                    Have an account? <Link to="/" style={{color: 'white', fontWeight: 'bold'}}>SignIn</Link>
-                  </p>
+                <p style={{ color: "white" }}>
+                  Have an account?{" "}
+                  <Link to="/" style={{ color: "white", fontWeight: "bold" }}>
+                    SignIn
+                  </Link>
+                </p>
               </div>
             </div>
           </div>

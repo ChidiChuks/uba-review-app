@@ -77,7 +77,10 @@ export class LogIn extends Component {
                 <div className="login-logo-float">
                   <h1>
                     <Link className="logo" to="/home">
-                      <img src="images/UBA-logo.svg" alt="United Bank for Africa Logo" />
+                      <img
+                        src="images/UBA-logo.svg"
+                        alt="United Bank for Africa Logo"
+                      />
                     </Link>
                   </h1>
                 </div>
@@ -101,7 +104,11 @@ export class LogIn extends Component {
                     <div className="content-login-right-main">
                       <h3>Sign in</h3>
                       <div className="form-w3ls-left-info">
-                        <form onSubmit={this.handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field">
+                        <form
+                          onSubmit={this.handleSubmit}
+                          data-netlify="true"
+                          data-netlify-honeypot="bot-field"
+                        >
                           <input
                             value={email}
                             name="email"
@@ -130,10 +137,16 @@ export class LogIn extends Component {
                         </form>
                       </div>
                     </div>
-                  <br />
-                  <p style={{ color: "white" }}>
-                    Don't have an account? <Link to="/Signup" style={{color: 'white', fontWeight: 'bold'}}>SignUp</Link>
-                  </p>
+                    <br />
+                    <p style={{ color: "white" }}>
+                      Don't have an account?{" "}
+                      <Link
+                        to="/Signup"
+                        style={{ color: "white", fontWeight: "bold" }}
+                      >
+                        SignUp
+                      </Link>
+                    </p>
                   </div>
                 </div>
               </div>
